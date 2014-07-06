@@ -2,7 +2,6 @@ package models
 
 import "fmt"
 
-
 type User struct {
 	FirstName, LastName string
 }
