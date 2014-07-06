@@ -7,11 +7,12 @@ import (
 
 func main() {
 	user := &models.User{ FirstName: "Bjarte", LastName: "Skjørestad" }
-	fmt.Println(models.Greet(user))
-
 	location := &models.Location{ City: "Røyneberg", Region: "Rogaland" }
-	fmt.Println(models.Greet(location))
-
 	location2 := &models.Location{ City: "Røyneberg", Region: "Rogaland", Country: "Norway" }
-	fmt.Println(models.Greet(location2))
+
+	namedThings := []models.Namer { user, location, location2 }
+
+	for _, v := range namedThings {
+		fmt.Println(models.Greet(v))
+	}
 }
